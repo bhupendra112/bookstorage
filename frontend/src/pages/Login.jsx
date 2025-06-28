@@ -23,7 +23,6 @@ function Login() {
     e.preventDefault();
     try {
       const response = await axios.post('http://localhost:5000/api/v1/log-in', userData);
-      console.log('Log-in successful:', response.data);
       alert('Log-in successful!');
       
       // Dispatch authentication actions

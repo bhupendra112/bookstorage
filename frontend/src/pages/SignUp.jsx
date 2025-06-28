@@ -20,7 +20,6 @@ function SignUp() {
     e.preventDefault(); // Prevent page reload
     try {
       const response = await axios.post('http://localhost:5000/api/v1/sign-up', userData);
-      console.log("Sign-up successful:", response.data);
       alert("Sign-up successful!");
       navigate("/login")
     } catch (error) {

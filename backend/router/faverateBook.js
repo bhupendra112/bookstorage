@@ -63,7 +63,6 @@ router.get("/get-favorite-books", authenticateToken, async(req, res) => {
 router.put("/add-cart-book", authenticateToken, async(req, res) => {
     try {
         const { bookid, id } = req.headers;
-        console.log("id:", id, "bookId:", bookid);
 
         const user = await User.findById(id);
         if (!user) return res.status(404).json({ message: "User not found" });

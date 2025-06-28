@@ -87,7 +87,6 @@ router.get("/get-all-orders-admin", authenticateToken, async(req, res) => {
             status: "Success",
             data: orders,
         });
-        console.log(orders)
     } catch (error) {
         console.error("Error fetching admin orders:", error);
         res.status(500).json({ message: "An error occurred", error: error.message });

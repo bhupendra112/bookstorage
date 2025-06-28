@@ -50,7 +50,7 @@ function App() {
         <Route path="/view-book-details/:id" element={<ViewBookDetails />} />
         <Route path="/edit-book/:bookid" element={<EditBook />} />
 
-        {/* Profile Routes */}
+
         <Route path="/profile" element={<Profile />}>
           <Route index element={role === "user" ? <Favourites /> : <AllOrders />} />
           <Route path="orderHistory" element={<UserOrderHistory />} />

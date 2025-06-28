@@ -36,7 +36,7 @@ function ViewBookDetails() {
     id: localStorage.getItem("id"),
     bookId: id,
   };
-console.log(headers.bookId)
+
   const onClickFavorite = async () => {
     try {
       const response = await axios.put(
